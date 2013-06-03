@@ -1,0 +1,11 @@
+<li data-bind="[class:selected] selected -> selected">
+  <div class="clearfix">
+    <div class="left" style="line-height:20px;width:385px;">
+      <h4><%= model.get('name') %></h4>
+      <p><%= model.get('description') %></p>
+    </div>
+    <div class="right">
+      <img src="<%- model.get('image') %>">
+    </div>
+  </div>
+</li>

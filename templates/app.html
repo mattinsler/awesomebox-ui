@@ -1,0 +1,140 @@
+<style>
+.nav-tabs {
+  border-bottom: none;
+}
+.nav-tabs > li {
+  margin-bottom: 0;
+}
+.nav-pills > li:first-child > a,
+.nav-pills > li:first-child > a:hover,
+.nav-tabs > li:first-child > a,
+.nav-tabs > li:first-child > a:hover {
+  border-left: none;
+  padding-left: 0;
+}
+.nav-pills > li > a,
+.nav-pills > li > a:hover,
+.nav-tabs > li > a,
+.nav-tabs > li > a:hover {
+  color: #555;
+  font-size: 12px;
+  text-decoration: underline;
+  font-weight: 400;
+  -webkit-border-radius: 0;
+  margin: 0;
+  padding: 0 10px;
+  border: none;
+  border-left: 1px solid #bbb;
+}
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover,
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover {
+  color: #555;
+  text-decoration: none;
+  font-weight: 600;
+  background: none;
+  border: none;
+  border-left: 1px solid #bbb;
+}
+
+.tab-content h4 {
+  color: #555;
+  margin: 0;
+  padding: 12px 14px 11px 14px;
+  border-bottom: 1px solid #ddd;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+ul.expandable-row-list {
+  list-style: none;
+  margin: 0;
+}
+ul.expandable-row-list li {
+  border-bottom: 1px solid #ddd;
+}
+ul.expandable-row-list li .row-header {
+  font-weight: bold;
+  line-height: 24px;
+  padding: 12px 14px 11px 14px;
+}
+ul.expandable-row-list li .row-content {
+  display: none;
+  margin: 0 15px 15px 15px;
+}
+
+ul.version-list .version {
+  padding-left: 30px;
+}
+ul.version-list .created-at {
+  padding-left: 50px;
+}
+</style>
+
+<div class="app-header clearfix">
+  <div class="meta left">
+    <h3>
+    <% if (model.is_remote) { %>
+      <i class="icon-rocket"></i>
+    <% } else { %>
+      <button class="btn btn-mini" data-event="click: ship" title="Ship this app!">
+        <i class="icon-rocket"></i>
+      </button>
+    <% } %>
+      <%= model.get('name') %>
+    </h3>
+    <small>
+      <span data-bind="directory"></span>
+    </small>
+    
+  <% if (model.is_remote) { %>
+    <ul class="nav nav-pills nav-tabs" style="margin: 10px 0 0 0;">
+      <li><a href="#status" data-toggle="tab">Status</a></li>
+      <li><a href="#settings" data-toggle="tab">Settings</a></li>
+      <li><a href="#versions" data-toggle="tab">Versions</a></li>
+    </ul>
+  <% } %>
+  </div>
+  
+  <div class="actions right">
+    <button class="btn btn-small" data-bind="[class:hide] is_running -> value !== true" data-event="click: open_local_site">
+      <i class="icon-external-link"></i>
+    </button>
+    
+    <div class="btn-group">
+      <button class="btn btn-small" data-event="click: start_stop">
+        <i class="icon-play" style="color:teal;" data-bind="[class:hide] is_running -> value === true"></i>
+        <i class="icon-stop" style="color:#d14;" data-bind="[class:hide] is_running -> value !== true"></i>
+      </button>
+      <button class="btn btn-small" data-event="click: open_folder">
+        <i class="icon-folder-open"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="docs">
+    Getting Started
+  </div>
+  
+<% if (App.get('online')) { %>
+  <div class="tab-pane" id="status">
+    <h4>Status</h4>
+  </div>
+
+  <div class="tab-pane" id="settings">
+    <h4>Settings</h4>
+  </div>
+
+  <div class="tab-pane" id="versions">
+    <h4>Running</h4>
+    <ul class="expandable-row-list version-list running"></ul>
+    <h4>Not Running</h4>
+    <ul class="expandable-row-list version-list not-running"></ul>
+  </div>
+<% } else { %>
+  You must be logged in
+<% } %>
+</div>

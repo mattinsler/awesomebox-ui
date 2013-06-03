@@ -1,0 +1,1278 @@
+html {
+  width: 100%;
+  height: 100%
+}
+body {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  cursor: default;
+  overflow-y: hidden;
+  -webkit-font-smoothing: subpixel-antialiased
+}
+h1,h2 {
+  font-weight: 100
+}
+h1 {
+  font-size: 50px
+}
+h2 {
+  font-size: 25px;
+  letter-spacing: 1px
+}
+span.checkbox {
+  display: inline-block;
+  position: relative;
+  margin: 0 2px -3px 0;
+  padding: 0;
+  width: 13px;
+  min-height: 0;
+  height: 13px;
+  border: 1px solid #999;
+  border-radius: 2px
+}
+span.checkbox>i[class^='icon-'] {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -1px
+}
+span.checkbox.checked>i[class^='icon-'] {
+  display: inline-block
+}
+body.browserFirefox span.checkbox {
+  margin-bottom: 2px
+}
+.spin.spin-small {
+  display: inline-block;
+  width: 24px;
+  height: 24px
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px
+}
+::-webkit-scrollbar-track {
+  background: #ddd
+}
+::-webkit-scrollbar-thumb {
+  background: #999
+}
+.library-view {
+  min-width: 1024px
+}
+.library-view .library-view-main-container {
+  width: 100%
+}
+.library-view .navbar-fixed-top {
+  position: static
+}
+.library-view .sidebar-nav-fixed {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  padding: 0;
+  width: 220px;
+  overflow-y: auto;
+  background: #191919
+}
+.library-view .content-view-container {
+  padding-left: 220px
+}
+.loginbox-view {
+  width: 100%;
+  height: 100%;
+  background: #157ab5;
+  color: #fff
+}
+.loginbox-view .loginbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  margin-left: -250px;
+  margin-top: -220px;
+  color: #68add6;
+  text-align: center
+}
+.loginbox-view .loginbox>img {
+  margin-bottom: 5px
+}
+.loginbox-view .loginbox>h1 {
+  color: #fff
+}
+.loginbox-view .loginbox .loginbox-form {
+  margin-top: 40px;
+  padding: 30px 0 25px 0;
+  background: #105e8b;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px
+}
+.loginbox-view .loginbox .loginbox-form.loginbox-form-oauth {
+  margin-top: 30px;
+  margin-bottom: 20px
+}
+.loginbox-view .loginbox .loginbox-form>p {
+  font-size: 16px
+}
+.loginbox-view .loginbox .loginbox-form>p .github {
+  display: inline-block;
+  padding-left: 27px;
+  padding-right: 2px;
+  background: url("../images/icons/github.png") 0 0 no-repeat
+}
+.loginbox-view .loginbox .loginbox-form>form {
+  position: relative;
+  margin-top: 20px
+}
+.loginbox-view .loginbox .loginbox-form>form>input:focus {
+  box-shadow: 0 0 7px #fff
+}
+.loginbox-view .loginbox .loginbox-form>form .spin {
+  position: absolute;
+  right: 80px;
+  top: 14px
+}
+.loginbox-view .loginbox .loginbox-form .alert-error {
+  margin: 0 46px;
+  font-size: 13px
+}
+.loginbox-view .loginbox .loginbox-terms {
+  margin-top: 10px;
+  font-size: 12px
+}
+.loginbox-view .loginbox .loginbox-terms>a {
+  color: #9cdaff;
+  text-decoration: underline
+}
+.loginbox-view .loginbox .loginbox-terms>a:hover {
+  color: #fff
+}
+.loginbox-view .loginbox .loginbox-spinner {
+  margin-top: 70px
+}
+.navbar .header-controls {
+  position: absolute;
+  top: 14px;
+  left: 162px
+}
+.navbar .header-controls>a {
+  margin-left: 8px;
+  text-decoration: none;
+  color: #fff
+}
+.navbar .header-controls>a:hover i[class^="icon-"] {
+  opacity: 1.0
+}
+.navbar .header-divider {
+  position: absolute;
+  height: 51px;
+  left: 220px;
+  border-right: 1px solid #30a6e6;
+  border-left: 1px solid #53b3ed
+}
+.navbar .header-searchbox {
+  position: absolute;
+  top: 10px;
+  left: 233px
+}
+.navbar .header-searchbox .input-search {
+  font-size: 12px
+}
+.navbar .header-searchbox .input-search:focus {
+  box-shadow: none !important;
+  border: 1px solid #ddd !important
+}
+.navbar .header-searchbox .clear-search {
+  font-size: 12px;
+  font-weight: bold
+}
+.navbar .header-searchbox .clear-search .icon-search {
+  display: inline-block
+}
+.navbar .header-searchbox .clear-search .icon-remove {
+  display: none
+}
+.navbar .header-searchbox .clear-search.clear-mode .icon-search {
+  display: none
+}
+.navbar .header-searchbox .clear-search.clear-mode .icon-remove {
+  display: inline-block
+}
+.navbar .header-signed-in a {
+  color: rgba(0,0,0,0.7);
+  text-decoration: none
+}
+.navbar .header-signed-in a:hover {
+  color: #000
+}
+.navbar .header-google-plus {
+  float: right;
+  margin-top: 16px
+}
+.navbar .header-google-plus>div {
+  width: 70px !important
+}
+ul.sidebar {
+  cursor: pointer;
+  margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+ul.sidebar>li {
+  position: relative;
+  list-style: none;
+  padding: 7px 7px 7px 40px;
+  color: #f1f1f1;
+  border-top: 1px solid #212121;
+  border-bottom: 1px solid #0a0c0e;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+ul.sidebar>li:hover {
+  color: #fff;
+  background: #111;
+  border-top: 1px solid #111
+}
+ul.sidebar>li.sidebar-selected {
+  background: #fff;
+  color: #333;
+  cursor: default
+}
+ul.sidebar>li.sidebar-selected i[class^="icon-"] {
+  opacity: 1.0
+}
+ul.sidebar>li.sidebar-selected:hover {
+  background: white;
+  color: #333
+}
+ul.sidebar>li.sidebar-new-gist {
+  margin-top: 20px;
+  margin-bottom: 20px
+}
+ul.sidebar>li.sidebar-spacer {
+  border: 0;
+  height: 10px;
+  cursor: default;
+  background: #191919
+}
+ul.sidebar>li.sidebar-spacer:hover {
+  background: #191919
+}
+ul.sidebar>li i[class^="icon-"] {
+  position: absolute;
+  top: 10px;
+  left: 18px
+}
+ul.sidebar>li .sidebar-count {
+  position: absolute;
+  right: 15px;
+  text-align: right;
+  color: #999;
+  font-size: 12px;
+  font-weight: bold
+}
+ul.sidebar li.sidebar-labels-heading {
+  border: none;
+  border-bottom: 1px solid #0a0c0e;
+  color: #777;
+  cursor: default
+}
+ul.sidebar li.sidebar-labels-heading:hover {
+  border-bottom: 1px solid #0a0c0e;
+  color: #777;
+  background: #191919
+}
+ul.sidebar li.sidebar-labels-heading .new-label-container {
+  position: absolute;
+  top: 1px;
+  right: 45px;
+  font-size: 14px;
+  color: #777;
+  cursor: pointer
+}
+ul.sidebar li.sidebar-labels-heading .new-label-container:hover {
+  color: #fff
+}
+ul.sidebar li.sidebar-labels-container {
+  padding: 0;
+  border: none;
+  cursor: default;
+  overflow-y: auto;
+  height: 400px
+}
+ul.sidebar li.sidebar-labels-container:hover {
+  color: #eee;
+  background: #191919
+}
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels {
+  margin: 0
+}
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li {
+  position: relative;
+  margin: 0;
+  padding: 7px 7px 7px 40px;
+  list-style: none;
+  color: #f1f1f1
+}
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-no-labels {
+  color: #777
+}
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label {
+  border-top: 1px solid #212121;
+  border-bottom: 1px solid #0a0c0e;
+  cursor: pointer
+}
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label.sidebar-selected {
+  background: #fff;
+  color: #333;
+  cursor: default
+}
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label.sidebar-selected i[class^="icon-"] {
+  opacity: 1.0
+}
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label.sidebar-selected:hover {
+  background: white;
+  color: #333
+}
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label.sidebar-selected:hover .sidebar-label-color {
+  cursor: pointer
+}
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label.sidebar-selected:hover .sidebar-label-color:hover {
+  border: 1px solid #000 !important
+}
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label:hover {
+  color: #fff;
+  background: #111;
+  border-top: 1px solid #111
+}
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label:hover .sidebar-label-color .edit-label {
+  display: inline
+}
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label .sidebar-label-grapple {
+  position: absolute;
+  top: 11px;
+  left: 0px;
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+  background: url("/images/icons/sidebar-label-grapple.png") no-repeat 50% 0;
+  cursor: move
+}
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label .sidebar-label-color {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid
+}
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label .sidebar-label-color:hover {
+  border: 1px solid #fff !important
+}
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label .sidebar-label-color .edit-label {
+  display: none;
+  top: 0;
+  left: -2px;
+  font-size: 12px;
+  color: #fff
+}
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label .sidebar-label-name {
+  display: inline-block;
+  width: 140px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+.gist-no-labels {
+  display: inline-block;
+  padding: 1px 0 2px 0;
+  line-height: 12px;
+  font-weight: 400;
+  color: #999
+}
+.gist-edit-labels {
+  display: inline-block;
+  padding: 1px 5px;
+  color: #777;
+  border: 1px solid #999;
+  border-radius: 2px;
+  font-size: 10px;
+  line-height: 13px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+.gist-edit-labels:hover {
+  color: #000;
+  border: 1px solid #000
+}
+.gist-edit-labels.gist-edit-label-active {
+  background: #fff
+}
+.gist-label {
+  display: inline-block;
+  padding: 1px 4px 2px 4px;
+  margin-right: 3px;
+  border-width: 1px;
+  border-radius: 2px;
+  border-style: solid;
+  line-height: 12px;
+  color: #fff;
+  font-size: 10px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+.label-color-1 {
+  border-color: #da1d00;
+  background: #da1d00
+}
+.label-color-2 {
+  border-color: #e9a449;
+  background: #e9a449
+}
+.label-color-3 {
+  border-color: #f5cb43;
+  background: #f5cb43
+}
+.label-color-4 {
+  border-color: #7ab45f;
+  background: #7ab45f
+}
+.label-color-5 {
+  border-color: #54949e;
+  background: #54949e
+}
+.label-color-6 {
+  border-color: #4b97d1;
+  background: #4b97d1
+}
+.label-color-7 {
+  border-color: #7b65b7;
+  background: #7b65b7
+}
+.label-color-8 {
+  border-color: #b5658c;
+  background: #b5658c
+}
+.label-color-9 {
+  border-color: #e67f7a;
+  background: #e67f7a
+}
+.label-color-10 {
+  border-color: #fbbe7b;
+  background: #fbbe7b
+}
+.label-color-11 {
+  border-color: #fce07c;
+  background: #fce07c
+}
+.label-color-12 {
+  border-color: #a3cd8d;
+  background: #a3cd8d
+}
+.label-color-13 {
+  border-color: #86b5bb;
+  background: #86b5bb
+}
+.label-color-14 {
+  border-color: #7db7e5;
+  background: #7db7e5
+}
+.label-color-15 {
+  border-color: #a091d2;
+  background: #a091d2
+}
+.label-color-16 {
+  border-color: #cd92b0;
+  background: #cd92b0
+}
+.split-view {
+  position: relative;
+  overflow: hidden
+}
+.split-view .split-view-list {
+  float: left;
+  width: 354px;
+  border-right: 1px solid #ddd
+}
+.split-view .split-view-list .split-view-list-gists {
+  overflow-y: auto
+}
+.split-view .split-view-content {
+  float: left
+}
+.no-gists {
+  margin-top: 30px;
+  text-align: center
+}
+.split-gist {
+  padding: 15px 15px 14px 15px;
+  border-bottom: 1px solid #ddd
+}
+.split-gist.gist-selected {
+  background: #f5f5f5;
+  box-shadow: inset 1px 1px 3px #ddd
+}
+.split-gist .split-gist-header {
+  position: relative
+}
+.split-gist .split-gist-header::after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both
+}
+.split-gist .split-gist-header img {
+  width: 28px;
+  height: 28px;
+  margin-right: 7px;
+  float: left
+}
+.split-gist .split-gist-header .gist-meta {
+  float: left;
+  line-height: 14px
+}
+.split-gist .split-gist-header .gist-meta .gist-name {
+  width: 259px;
+  font-size: 12px;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+.split-gist .split-gist-header .gist-meta .gist-created-updated {
+  font-size: 10px;
+  color: #777
+}
+.split-gist .split-gist-header .gist-flags {
+  position: absolute;
+  top: -3px;
+  right: 2px
+}
+.split-gist .split-gist-header .gist-flags>i {
+  margin-right: 2px
+}
+.split-gist .gist-description {
+  height: 32px;
+  margin-top: 8px;
+  margin-left: 33px;
+  font-size: 12px;
+  line-height: 16px;
+  overflow: hidden
+}
+.split-gist .gist-labels {
+  margin-top: 8px;
+  margin-left: 33px;
+  font-size: 11px;
+  line-height: 11px
+}
+.split-gist .gist-labels>span {
+  display: inline-block;
+  margin-right: 0;
+  margin-bottom: -3px
+}
+.split-gist .gist-labels>span.gist-label {
+  margin-bottom: 3px
+}
+.filter-bar {
+  position: relative;
+  height: 30px;
+  background: #f5f5f5;
+  padding: 12px 14px 11px 14px;
+  border-bottom: 1px solid #ddd
+}
+.filter-bar .btn-group {
+  margin-top: 2px
+}
+.filter-bar .btn-group .btn.active {
+  cursor: default
+}
+.filter-bar .filter-bar-sorter {
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  font-size: 12px
+}
+.filter-bar .filter-bar-sorter a {
+  display: inline-block;
+  margin-left: 1px;
+  color: #999;
+  text-decoration: none
+}
+.filter-bar .filter-bar-sorter a.filter-by-created {
+  width: 60px;
+  text-align: right
+}
+.filter-bar .filter-bar-sorter a.filter-by-updated {
+  width: 65px;
+  text-align: right
+}
+.filter-bar .filter-bar-sorter a.filter-active {
+  color: #333;
+  opacity: 1.0
+}
+.filter-bar .filter-bar-sorter a:hover {
+  color: #333
+}
+body.browserFirefox .filter-bar .filter-bar-sorter a {
+  margin-left: 5px
+}
+.split-view-content {
+  display: table;
+  overflow: hidden
+}
+.split-view-content .focus-select-gist {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center
+}
+.split-view-content .focus-select-gist>i {
+  font-size: 80px;
+  color: #999
+}
+.split-view-content .focus-select-gist>h2 {
+  font-weight: 300;
+  color: #999
+}
+.split-view-content .focus-view-gist {
+  overflow: hidden
+}
+.split-view-content .focus-view-gist .focus-view-header {
+  position: relative;
+  background: #f5f5f5;
+  padding: 12px 14px 18px 14px;
+  border-bottom: 1px solid #ddd
+}
+.split-view-content .focus-view-gist .focus-view-header .focus-view-header-name {
+  margin-top: 5px;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+.split-view-content .focus-view-gist .focus-view-header .focus-view-header-meta {
+  font-size: 11px;
+  line-height: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+.split-view-content .focus-view-gist .focus-view-header .focus-view-header-labels {
+  margin-top: 10px
+}
+.split-view-content .focus-view-gist .focus-view-header .focus-view-header-right {
+  position: absolute;
+  top: 22px;
+  right: 13px
+}
+.split-view-content .focus-view-gist .focus-view-header .focus-view-header-right .focus-view-num-files {
+  margin-right: 10px;
+  font-size: 11px;
+  font-weight: bold
+}
+.split-view-content .focus-view-gist .focus-view-content {
+  overflow-y: auto
+}
+.split-view-content .focus-view-gist .focus-view-content .focus-view-description {
+  padding: 12px 14px 11px 14px;
+  border-bottom: 1px solid #ddd;
+  font-weight: normal
+}
+.split-view-content .focus-view-gist .focus-view-content .focus-view-files-spinner {
+  margin-top: 40px
+}
+.gist-file {
+  font-weight: normal;
+  border-bottom: 1px solid #ddd
+}
+.gist-file .gist-file-header {
+  position: relative;
+  padding: 12px 14px 11px 14px
+}
+.gist-file .gist-file-header .gist-file-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: bold
+}
+.gist-file .gist-file-header .gist-file-name .icon-chevron-right,.gist-file .gist-file-header .gist-file-name .icon-chevron-down {
+  margin-right: 5px
+}
+.gist-file .gist-file-header .gist-file-name .icon-file-alt {
+  margin-right: 3px
+}
+.gist-file .gist-file-header .gist-file-controls {
+  position: absolute;
+  top: 10px;
+  right: 15px
+}
+.gist-file .gist-file-header .gist-file-controls .gist-file-language {
+  margin-right: 5px
+}
+.gist-file .gist-file-header .gist-file-spinner {
+  position: absolute;
+  top: 20px;
+  right: 24px
+}
+.gist-file .gist-file-code {
+  margin: 0 15px 15px 15px
+}
+.gist-file .gist-file-code>pre {
+  background: ghostwhite
+}
+.gist-file .gist-file-code>pre>code {
+  cursor: text
+}
+.gist-file .gist-file-code .markdown {
+  cursor: text;
+  background: white;
+  margin-top: 5px;
+  padding: 8px 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.15)
+}
+.gist-file .gist-file-code .markdown div,.gist-file .gist-file-code .markdown dl,.gist-file .gist-file-code .markdown dt,.gist-file .gist-file-code .markdown dd,.gist-file .gist-file-code .markdown ul,.gist-file .gist-file-code .markdown ol,.gist-file .gist-file-code .markdown li,.gist-file .gist-file-code .markdown h1,.gist-file .gist-file-code .markdown h2,.gist-file .gist-file-code .markdown h3,.gist-file .gist-file-code .markdown h4,.gist-file .gist-file-code .markdown h5,.gist-file .gist-file-code .markdown h6,.gist-file .gist-file-code .markdown pre,.gist-file .gist-file-code .markdown code,.gist-file .gist-file-code .markdown form,.gist-file .gist-file-code .markdown fieldset,.gist-file .gist-file-code .markdown legend,.gist-file .gist-file-code .markdown input,.gist-file .gist-file-code .markdown textarea,.gist-file .gist-file-code .markdown p,.gist-file .gist-file-code .markdown blockquote,.gist-file .gist-file-code .markdown th,.gist-file .gist-file-code .markdown td {
+  margin: 0;
+  padding: 0
+}
+.gist-file .gist-file-code .markdown table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+.gist-file .gist-file-code .markdown fieldset,.gist-file .gist-file-code .markdown img {
+  border: 0
+}
+.gist-file .gist-file-code .markdown address,.gist-file .gist-file-code .markdown caption,.gist-file .gist-file-code .markdown cite,.gist-file .gist-file-code .markdown code,.gist-file .gist-file-code .markdown dfn,.gist-file .gist-file-code .markdown em,.gist-file .gist-file-code .markdown strong,.gist-file .gist-file-code .markdown th,.gist-file .gist-file-code .markdown var {
+  font-style: normal;
+  font-weight: normal
+}
+.gist-file .gist-file-code .markdown ol,.gist-file .gist-file-code .markdown ul {
+  list-style: none
+}
+.gist-file .gist-file-code .markdown caption,.gist-file .gist-file-code .markdown th {
+  text-align: left
+}
+.gist-file .gist-file-code .markdown h1,.gist-file .gist-file-code .markdown h2,.gist-file .gist-file-code .markdown h3,.gist-file .gist-file-code .markdown h4,.gist-file .gist-file-code .markdown h5,.gist-file .gist-file-code .markdown h6 {
+  font-size: 100%;
+  font-weight: normal
+}
+.gist-file .gist-file-code .markdown q:before,.gist-file .gist-file-code .markdown q:after {
+  content: ""
+}
+.gist-file .gist-file-code .markdown abbr,.gist-file .gist-file-code .markdown acronym {
+  border: 0;
+  font-variant: normal
+}
+.gist-file .gist-file-code .markdown sup {
+  vertical-align: text-top
+}
+.gist-file .gist-file-code .markdown sub {
+  vertical-align: text-bottom
+}
+.gist-file .gist-file-code .markdown input,.gist-file .gist-file-code .markdown textarea,.gist-file .gist-file-code .markdown select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit
+}
+.gist-file .gist-file-code .markdown input,.gist-file .gist-file-code .markdown textarea,.gist-file .gist-file-code .markdown select {*font-size:100%
+}
+.gist-file .gist-file-code .markdown legend {
+  color: #000
+}
+.gist-file .gist-file-code .markdown #yui3-css-stamp.cssreset {
+  display: none
+}
+.gist-file .gist-file-code .markdown h1,.gist-file .gist-file-code .markdown h2,.gist-file .gist-file-code .markdown h3,.gist-file .gist-file-code .markdown h4,.gist-file .gist-file-code .markdown h5,.gist-file .gist-file-code .markdown h6 {
+  font-weight: bold;
+  color: #000000
+}
+.gist-file .gist-file-code .markdown h1 {
+  margin: 0 0 10px 0;
+  color: #000000;
+  font-size: 28px;
+  line-height: 44px
+}
+.gist-file .gist-file-code .markdown h2 {
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid #CCCCCC;
+  color: #000000;
+  font-size: 24px;
+  line-height: 38px
+}
+.gist-file .gist-file-code .markdown h3 {
+  font-size: 18px
+}
+.gist-file .gist-file-code .markdown h4 {
+  font-size: 16px
+}
+.gist-file .gist-file-code .markdown h5 {
+  font-size: 14px
+}
+.gist-file .gist-file-code .markdown h6 {
+  color: #777777;
+  background-color: inherit;
+  font-size: 14px
+}
+.gist-file .gist-file-code .markdown hr {
+  height: 0.2em;
+  border: 0;
+  color: #CCCCCC;
+  background-color: #CCCCCC
+}
+.gist-file .gist-file-code .markdown p,.gist-file .gist-file-code .markdown blockquote,.gist-file .gist-file-code .markdown ul,.gist-file .gist-file-code .markdown ol,.gist-file .gist-file-code .markdown dl,.gist-file .gist-file-code .markdown li,.gist-file .gist-file-code .markdown table,.gist-file .gist-file-code .markdown pre {
+  margin: 15px 0
+}
+.gist-file .gist-file-code .markdown blockquote {
+  padding: 0 15px;
+  border-left: 4px solid #ddd;
+  color: #777;
+  line-height: 20px
+}
+.gist-file .gist-file-code .markdown blockquote>:first-child {
+  margin-top: 0
+}
+.gist-file .gist-file-code .markdown blockquote p {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 22px
+}
+.gist-file .gist-file-code .markdown em {
+  font-style: italic
+}
+.gist-file .gist-file-code .markdown strong {
+  font-weight: bold
+}
+.gist-file .gist-file-code .markdown code,.gist-file .gist-file-code .markdown pre {
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
+  border-radius: 3px;
+  background-color: #F8F8F8;
+  color: inherit
+}
+.gist-file .gist-file-code .markdown code {
+  border: 1px solid #EAEAEA;
+  margin: 0 2px;
+  padding: 0 5px
+}
+.gist-file .gist-file-code .markdown pre {
+  border: 1px solid #CCCCCC;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px
+}
+.gist-file .gist-file-code .markdown pre>code {
+  border: 0;
+  margin: 0;
+  padding: 0
+}
+.gist-file .gist-file-code .markdown a,.gist-file .gist-file-code .markdown a:visited {
+  color: #4183C4;
+  background-color: inherit;
+  text-decoration: none
+}
+.gist-file .gist-file-code .markdown ul {
+  margin: 15px 0;
+  padding-left: 30px;
+  line-height: 22px
+}
+.gist-file .gist-file-code .markdown ul li {
+  margin: 0;
+  line-height: 22px;
+  list-style-type: disc
+}
+.gist-file .gist-file-code .markdown ol {
+  margin: 15px 0;
+  padding-left: 30px;
+  line-height: 22px
+}
+.gist-file .gist-file-code .markdown ol li {
+  margin: 0;
+  line-height: 22px;
+  list-style-type: decimal
+}
+.gist-file .gist-editor-container {
+  margin: 0 15px 15px 15px
+}
+.focus-view-edit-gist {
+  overflow: hidden
+}
+.focus-view-edit-gist .focus-view-header {
+  position: relative;
+  background: #f5f5f5;
+  padding: 12px 14px 16px 14px;
+  border-bottom: 1px solid #ddd
+}
+.focus-view-edit-gist .focus-view-header .focus-view-header-name {
+  margin-top: 5px;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+.focus-view-edit-gist .focus-view-header .focus-view-header-right {
+  position: absolute;
+  top: 14px;
+  right: 13px
+}
+.focus-view-edit-gist .focus-view-header .focus-view-header-right .edit-gist-spinner {
+  position: absolute;
+  top: 13px;
+  right: 133px
+}
+.focus-view-edit-gist .focus-view-content {
+  overflow-y: auto
+}
+.focus-view-edit-gist .focus-view-content .focus-view-description {
+  padding: 15px 14px 5px 14px;
+  border-bottom: 1px solid #ddd
+}
+.focus-view-edit-gist .focus-view-content .focus-view-description>textarea {
+  width: 100%;
+  resize: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
+}
+.focus-view-edit-gist .focus-view-content .gist-file .gist-file-header {
+  padding-bottom: 7px
+}
+.focus-view-edit-gist .focus-view-content .gist-file .gist-file-header .gist-file-name {
+  overflow: visible
+}
+.focus-view-edit-gist .focus-view-content .gist-file .gist-file-header .gist-file-name input[type='text'] {
+  width: 150px;
+  margin: 0;
+  font-size: 12px
+}
+.focus-view-edit-gist .focus-view-content .gist-file .gist-file-header .gist-file-name .gist-file-language-chooser {
+  width: 130px
+}
+.focus-view-edit-gist .focus-view-content .gist-file .gist-file-header .gist-file-controls {
+  top: 14px
+}
+.focus-view-edit-gist .focus-view-content .gist-file .gist-editor {
+  height: 250px;
+  border: 1px solid #ddd;
+  border-radius: 4px
+}
+.focus-view-edit-gist .focus-view-content .add-another-file-container {
+  padding: 12px 14px 11px 14px
+}
+body.browserFirefox .gist-file .chzn-container {
+  position: absolute;
+  margin-left: 5px
+}
+.dialog-footer {
+  position: relative;
+  padding: 8px 8px;
+  background: #f7f7f7;
+  border-top: 1px solid #ddd;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  text-align: right
+}
+.dialog-inner-content {
+  padding: 5px 9px
+}
+.dialog-share-gist {
+  width: 200px;
+  padding-bottom: 5px
+}
+.dialog-share-gist ul {
+  margin: 0;
+  padding: 0
+}
+.dialog-share-gist ul li {
+  margin: 0 0 10px 0;
+  padding: 0;
+  list-style: none
+}
+.dialog-share-gist ul li:last-child {
+  margin-bottom: 0
+}
+.dialog-share-gist ul li input[type='text'] {
+  width: 170px;
+  margin: 0;
+  font-size: 12px;
+  color: #777
+}
+.dialog-new-label,.dialog-edit-label {
+  width: 190px
+}
+.dialog-new-label .qtip-content,.dialog-edit-label .qtip-content {
+  padding: 0;
+  padding-top: 5px
+}
+.dialog-new-label .label-name-container,.dialog-edit-label .label-name-container {
+  margin-bottom: 5px
+}
+.dialog-new-label .label-name-container .label-name,.dialog-edit-label .label-name-container .label-name {
+  width: 154px;
+  margin-bottom: 0;
+  font-size: 12px
+}
+.dialog-new-label .label-colors-container,.dialog-edit-label .label-colors-container {
+  border-top: 1px solid #ddd;
+  padding-top: 10px
+}
+.dialog-new-label .label-colors-container .label-color,.dialog-edit-label .label-colors-container .label-color {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  border-radius: 2px;
+  cursor: pointer
+}
+.dialog-new-label .label-colors-container .label-color.last-in-row,.dialog-edit-label .label-colors-container .label-color.last-in-row {
+  margin-right: 0
+}
+.dialog-new-label .label-colors-container .label-color:hover,.dialog-edit-label .label-colors-container .label-color:hover {
+  border: 1px solid #000 !important
+}
+.dialog-new-label .label-colors-container .label-color.label-color-selected,.dialog-edit-label .label-colors-container .label-color.label-color-selected {
+  border: 1px solid #fff !important;
+  box-shadow: 0 0 4px #000;
+  cursor: default
+}
+.dialog-new-label .label-colors-container .label-color.label-color-1,.dialog-edit-label .label-colors-container .label-color.label-color-1 {
+  border: 1px solid #da1d00;
+  background: #da1d00
+}
+.dialog-new-label .label-colors-container .label-color.label-color-2,.dialog-edit-label .label-colors-container .label-color.label-color-2 {
+  border: 1px solid #e9a449;
+  background: #e9a449
+}
+.dialog-new-label .label-colors-container .label-color.label-color-3,.dialog-edit-label .label-colors-container .label-color.label-color-3 {
+  border: 1px solid #f5cb43;
+  background: #f5cb43
+}
+.dialog-new-label .label-colors-container .label-color.label-color-4,.dialog-edit-label .label-colors-container .label-color.label-color-4 {
+  border: 1px solid #7ab45f;
+  background: #7ab45f
+}
+.dialog-new-label .label-colors-container .label-color.label-color-5,.dialog-edit-label .label-colors-container .label-color.label-color-5 {
+  border: 1px solid #54949e;
+  background: #54949e
+}
+.dialog-new-label .label-colors-container .label-color.label-color-6,.dialog-edit-label .label-colors-container .label-color.label-color-6 {
+  border: 1px solid #4b97d1;
+  background: #4b97d1
+}
+.dialog-new-label .label-colors-container .label-color.label-color-7,.dialog-edit-label .label-colors-container .label-color.label-color-7 {
+  border: 1px solid #7b65b7;
+  background: #7b65b7
+}
+.dialog-new-label .label-colors-container .label-color.label-color-8,.dialog-edit-label .label-colors-container .label-color.label-color-8 {
+  border: 1px solid #b5658c;
+  background: #b5658c
+}
+.dialog-new-label .label-colors-container .label-color.label-color-9,.dialog-edit-label .label-colors-container .label-color.label-color-9 {
+  border: 1px solid #e67f7a;
+  background: #e67f7a
+}
+.dialog-new-label .label-colors-container .label-color.label-color-10,.dialog-edit-label .label-colors-container .label-color.label-color-10 {
+  border: 1px solid #fbbe7b;
+  background: #fbbe7b
+}
+.dialog-new-label .label-colors-container .label-color.label-color-11,.dialog-edit-label .label-colors-container .label-color.label-color-11 {
+  border: 1px solid #fce07c;
+  background: #fce07c
+}
+.dialog-new-label .label-colors-container .label-color.label-color-12,.dialog-edit-label .label-colors-container .label-color.label-color-12 {
+  border: 1px solid #a3cd8d;
+  background: #a3cd8d
+}
+.dialog-new-label .label-colors-container .label-color.label-color-13,.dialog-edit-label .label-colors-container .label-color.label-color-13 {
+  border: 1px solid #86b5bb;
+  background: #86b5bb
+}
+.dialog-new-label .label-colors-container .label-color.label-color-14,.dialog-edit-label .label-colors-container .label-color.label-color-14 {
+  border: 1px solid #7db7e5;
+  background: #7db7e5
+}
+.dialog-new-label .label-colors-container .label-color.label-color-15,.dialog-edit-label .label-colors-container .label-color.label-color-15 {
+  border: 1px solid #a091d2;
+  background: #a091d2
+}
+.dialog-new-label .label-colors-container .label-color.label-color-16,.dialog-edit-label .label-colors-container .label-color.label-color-16 {
+  border: 1px solid #cd92b0;
+  background: #cd92b0
+}
+.dialog-new-label .dialog-footer .delete-label,.dialog-edit-label .dialog-footer .delete-label {
+  position: absolute;
+  left: 8px
+}
+.dialog-edit-label .qtip-tip {
+  margin-left: -85px !important
+}
+.dialog-edit-gist-labels {
+  width: 220px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+.dialog-edit-gist-labels .qtip-content {
+  padding: 0
+}
+.dialog-edit-gist-labels .dialog-pick-labels-container {
+  margin: 5px 0 0 0;
+  max-height: 180px;
+  overflow-y: auto
+}
+.dialog-edit-gist-labels .dialog-pick-labels-container.no-labels-available {
+  margin-bottom: 6px;
+  padding: 3px 9px 5px 9px;
+  font-size: 13px
+}
+.dialog-edit-gist-labels .dialog-pick-labels {
+  margin: 0;
+  position: 0
+}
+.dialog-edit-gist-labels .dialog-pick-labels>li {
+  position: relative;
+  margin: 0;
+  padding: 3px 9px 5px 9px;
+  list-style: none;
+  font-size: 13px;
+  cursor: pointer
+}
+.dialog-edit-gist-labels .dialog-pick-labels>li:hover .checkbox {
+  box-shadow: inset 0 1px 4px #ddd
+}
+.dialog-edit-gist-labels .dialog-pick-labels>li .label-name {
+  display: inline-block;
+  width: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+.dialog-edit-gist-labels .dialog-pick-labels>li .label-color {
+  position: absolute;
+  top: 7px;
+  right: 9px;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 2px;
+  border-width: 1px
+}
+body.browserFirefox .dialog-edit-gist-labels .dialog-pick-labels>li {
+  padding: 3px 9px 3px 9px
+}
+.library-notifications {
+  position: fixed;
+  width: 100%;
+  top: 35px;
+  text-align: center;
+  z-index: 9900;
+  pointer-events: none
+}
+.library-notifications>.notyfy_wrapper {
+  display: inline-block !important
+}
+.new-gist-modal .modal-gist-description {
+  padding: 15px 14px 5px 14px;
+  border-bottom: 1px solid #ddd
+}
+.new-gist-modal .modal-gist-description .gist-description {
+  width: 100%;
+  resize: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
+}
+.new-gist-modal .modal-header {
+  position: relative
+}
+.new-gist-modal .modal-header .modal-header-labels {
+  position: absolute;
+  top: 13px;
+  right: 14px
+}
+.new-gist-modal .modal-header .modal-header-labels .gist-label-container {
+  position: absolute;
+  width: 550px;
+  text-align: right;
+  top: 0;
+  right: 67px
+}
+.new-gist-modal .modal-body {
+  padding: 0
+}
+.new-gist-modal .modal-body .gist-file .gist-file-header {
+  padding-bottom: 7px
+}
+.new-gist-modal .modal-body .gist-file .gist-file-header .gist-file-name {
+  overflow: visible
+}
+.new-gist-modal .modal-body .gist-file .gist-file-header .gist-file-name input[type='text'] {
+  width: 150px;
+  margin: 0;
+  font-size: 12px
+}
+.new-gist-modal .modal-body .gist-file .gist-file-header .gist-file-name .gist-file-language-chooser {
+  width: 130px
+}
+.new-gist-modal .modal-body .gist-file .gist-file-header .gist-file-controls {
+  top: 14px
+}
+.new-gist-modal .modal-body .gist-file .gist-editor {
+  height: 270px;
+  border: 1px solid #ddd;
+  border-radius: 4px
+}
+.new-gist-modal .modal-body .add-another-file-container {
+  padding: 12px 14px 11px 14px
+}
+.new-gist-modal .modal-footer {
+  position: relative
+}
+.new-gist-modal .modal-footer .modal-footer-left {
+  position: absolute;
+  left: 14px;
+  top: 15px;
+  font-weight: bold;
+  font-size: 12px;
+  color: #555;
+  text-transform: uppercase
+}
+.new-gist-modal .modal-footer .modal-footer-left .switch {
+  margin-right: 4px
+}
+.new-gist-modal .modal-footer .modal-footer-left>span {
+  position: absolute;
+  display: inline-block;
+  left: 91px;
+  top: 5px
+}
+.new-gist-modal .modal-footer .new-gist-spinner {
+  position: absolute;
+  top: 28px;
+  right: 174px
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>awesomebox</title>
+  
+  <!-- link href="components/bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet" -->
+  <!-- link href="components/bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet" -->
+  <!-- link href="stylesheets/master.css" rel="stylesheet" -->
+  <link href="stylesheets/bootstrap.css" rel="stylesheet">
+  <link href="components/font-awesome/build/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="components/tooltipster/css/tooltipster.css" rel="stylesheet">
+  <link href="stylesheets/gistbox.css" rel="stylesheet">
+  
+  <!-- font awesome -->
+  <!-- tooltipster -->
+  <!-- notyfy -->
+  <!-- qtip -->
+  <!-- chosen -->
+  <!-- bootstrap-modal -->
+  <!-- animate.css -->
+
+  <style>
+  .navbar-fixed-top {
+    position: static;
+  }
+  header .gravatar {
+    margin-left: 10px;
+    border-radius: 50px;
+  }
+  .navbar .nav a.dropdown-toggle {
+    padding: 10px 10px 8px;
+  }
+
+  .sidebar-nav-fixed {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    bottom: 0;
+    padding: 0;
+    width: 220px;
+    overflow-y: auto;
+    background: #191919;
+  }
+  #content {
+    position: absolute;
+    left: 220px;
+    top: 50px;
+    bottom: 0;
+    right: 0;
+  }
+  small.error {
+    color: #d14;
+  }
+  
+  .left {float: left;}
+  .right {float: right;}
+  ul.template-list {
+    margin: 0;
+    height: 250px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+  }
+  ul.template-list li {
+    line-height: 0;
+    padding: 15px 15px 14px 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  ul.template-list li:hover {
+    background: #f5f5f5;
+  }
+  ul.template-list li.selected {
+    background: #f0f0f0;
+    box-shadow: inset 1px 1px 3px #ddd;
+  }
+  ul.template-list li h4 {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  ul.template-list li p {
+    font-size: 12px;
+    color: #555;
+    font-weight: 300;
+  }
+  ul.template-list li img {
+    max-height: 100px;
+    max-width: 100px;
+    border: 1px solid #eee;
+  }
+  .app-header {
+    position: relative;
+    background: #f5f5f5;
+    padding: 12px 14px 18px 14px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: inset 1px 1px 3px #aaa;
+  }
+  .app-header .meta h3 {
+    color: #555;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .app-header .meta small {
+    display: block;
+    font-size: 11px;
+    line-height: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .app-header .actions {
+    position: absolute;
+    top: 22px;
+    right: 13px;
+  }
+  .navbar .brand {
+    border-bottom: 2px solid #191919;
+    padding-bottom: 14px;
+    width: 180px;
+  }
+  </style>
+  
+  
+  <script type="text/javascript" src="components/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="components/bootstrap/docs/assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="components/tooltipster/js/jquery.tooltipster.min.js"></script>
+  
+  <script>
+  $(function() {
+    $('.tooltip').tooltipster();
+    
+    $(document).on('propertychange keyup input paste', 'input[detect-text-change]', function () {
+      var old_val = $(this).data('old-text-value')
+        , val = $(this).val();
+      if (old_val !== val) {
+        $(this).trigger('text-change', [val, old_val]);
+      }
+      $(this).data('old-text-value', val);
+    });
+    $(document).on('click', 'ul.expandable-row-list .row-header .expand-contract', function() {
+      var $icon = $('i', this);
+      var $content = $(this).parents('li').find('.row-content');
+      var is_visible = $content.is(':visible');
+      $content.slideToggle(function() {
+        $icon.toggleClass('icon-chevron-down', is_visible);
+        $icon.toggleClass('icon-chevron-up', !is_visible);
+      });
+    });
+  });
+  </script>
+  
+  <script src="javascripts/main.js"></script>
+</head>
+
+<body>
+  <header id="header"></header>
+  <nav id="drawer"></nav>
+  <div id="content"></div>
+</body>
+</html>

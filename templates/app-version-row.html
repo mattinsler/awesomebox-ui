@@ -1,0 +1,25 @@
+<li>
+  <div class="row-header clearfix">
+    <button class="btn btn-mini left" data-event="click: start_stop">
+      <i class="icon-play" data-bind="[class:hide] running -> value === true"></i>
+      <i class="icon-stop" data-bind="[class:hide] running -> value !== true"></i>
+    </button>
+    <button class="btn btn-mini left" data-event="click: open_remote" data-bind="[class:hide] running -> value !== true">
+      <i class="icon-external-link"></i>
+    </button>
+    <span class="version left"><%= model.get('instance').version_name %></span>
+    <span class="created-at left" data-bind="[class:hide] running -> value === true">
+      Created <%= moment(model.get('instance').created_at).format('MM/DD/YYYY') %>
+    </span>
+    <span class="created-at left" data-bind="[class:hide] running -> value !== true">
+      Started <span data-bind="@App.clock:every_10_sec, started_at -> moment(started_at).fromNow()"></span>
+    </span>
+    <button class="btn btn-mini expand-contract right">
+      <i class="icon-chevron-down"></i>
+    </button>
+  </div>
+  <div class="row-content">
+    Change List<br/>
+    Thumbnail of index page
+  </div>
+</li>

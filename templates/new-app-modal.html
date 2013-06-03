@@ -1,0 +1,25 @@
+<div class="modal hide fade" tabindex="-1" role="dialog">
+  <div class="modal-header">
+    <h3>Create App</h3>
+    <div class="btn-group" data-toggle="buttons-radio" style="position:absolute;right:13px;top:12px;" name="type">
+      <button class="btn btn-mini active" value="new">New</button>
+      <button class="btn btn-mini" value="open">Open</button>
+    </div>
+  </div>
+  <div class="modal-body">
+    <fieldset>
+      <label>Directory <small class="error hide" name="dir"></small></label>
+      <div class="input-append">
+        <input name="dir" type="text" style="width:476px;">
+        <button class="btn" type="button" data-event="click: show_dir"><i class="icon-folder-open"></i></button>
+      </div>
+      
+      <label>Template</label>
+      <ul class="template-list"></ul>
+    </fieldset>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal">Cancel</button>
+    <button class="btn btn-primary" data-event="click: create_app">Create App</button>
+  </div>
+</div>
